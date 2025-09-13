@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz 1er Mes ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: black; /* TEXTO NEGRO */
+      background: url("fondo.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.4em;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .galeria {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .galeria img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    /* Corazones flotando */
+    .corazon {
+      position: fixed;
+      bottom: -10px;
+      color: red;
+      font-size: 24px;
+      animation: flotar 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes flotar {
+      from { transform: translateY(0) scale(1); }
+      to { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>💖 Feliz 1er Mes, Mi Amor 💖</h1>
+    <p>
+       La primera pagina de nuestro libro, el cual espero nunca tenga fin porque nuestra relacion
+        durara para siempre, te amo mucho y este primer mes lo he sentido como un año
+       ya que cada hora, minuto y segundo que paso contigo es como si el tiempo se congelara
+        solo para estar contigo mas rato.
+       Se que es algo tonto este regalo digo, quien hace una pagina como regalo de 1er mes jaja qbobo
+      pero al menos quiero que sepas que lo hice con todo el corazon y espero te guste my lovecito.❤️
+    </p>
+  </section>
+
+  <section>
+    <h1>Pugs captados en camara 100% real no fake</h1>
+    <div class="galeria">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+    </div>
+  </section>
+
+  <section>
+    <h1>You and Me, Foreveeerr</h1>
+    <p>Esto es solo el comienzo de nuestra historia. Te amo con todo mi corazón. 💕</p>
+  </section>
+
+  <footer>
+    Hecho con ❤️ para ti
+  </footer>
+
+  <script>
+    // Efecto de corazones flotando
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      corazon.innerText = "❤️";
+      document.body.appendChild(corazon);
+
+      setTimeout(() => {
+        corazon.remove();
+      }, 6000);
+    }
+
+    setInterval(crearCorazon, 500);
+  </script>
+</body>
+</html>
